@@ -3,9 +3,9 @@ from phonenumbers import geocoder
 import folium
 # number = "+1 (775) 628-3252"
 
-Key = "6d6f969fd9024ac8afde957f0c86a5ba"
+Key = "your api key"
 
-number = "+923007194092"
+number = "enter phone number"
 check_number = phonenumbers.parse(number)
 number_location = geocoder.description_for_number(check_number, "en")
 print(number_location)
