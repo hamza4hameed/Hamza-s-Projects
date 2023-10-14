@@ -1,57 +1,6 @@
 import tkinter
 from tkinter import ttk
-from tkinter import messagebox
-import sqlite3
 
-# def enter_data():
-#     accepted = accept_var.get()
-    
-#     if accepted=="Accepted":
-#         # User info
-#         firstname = first_name_entry.get()
-#         lastname = last_name_entry.get()
-        
-#         if firstname and lastname:
-#             title = title_combobox.get()
-#             age = age_spinbox.get()
-#             nationality = nationality_combobox.get()
-            
-#             # Course info
-#             registration_status = reg_status_var.get()
-#             numcourses = numcourses_spinbox.get()
-#             numsemesters = numsemesters_spinbox.get()
-            
-#             print("First name: ", firstname, "Last name: ", lastname)
-#             print("Title: ", title, "Age: ", age, "Nationality: ", nationality)
-#             print("# Courses: ", numcourses, "# Semesters: ", numsemesters)
-#             print("Registration status", registration_status)
-#             print("------------------------------------------")
-            
-#             # Create Table
-#             conn = sqlite3.connect('data.db')
-#             table_create_query = '''CREATE TABLE IF NOT EXISTS Student_Data 
-#                     (firstname TEXT, lastname TEXT, title TEXT, age INT, nationality TEXT, 
-#                     registration_status TEXT, num_courses INT, num_semesters INT)
-#             '''
-#             conn.execute(table_create_query)
-            
-#             # Insert Data
-#             data_insert_query = '''INSERT INTO Student_Data (firstname, lastname, title, 
-#             age, nationality, registration_status, num_courses, num_semesters) VALUES 
-#             (?, ?, ?, ?, ?, ?, ?, ?)'''
-#             data_insert_tuple = (firstname, lastname, title,
-#                                   age, nationality, registration_status, numcourses, numsemesters)
-#             cursor = conn.cursor()
-#             cursor.execute(data_insert_query, data_insert_tuple)
-#             conn.commit()
-#             conn.close()
-
-            
-                
-#         else:
-#             tkinter.messagebox.showwarning(title="Error", message="First name and last name must be required.")
-#     else:
-#         tkinter.messagebox.showwarning(title= "Error", message="You have not accepted the terms")
 def save():
     f = open("data_entry_form.txt", "a")
     f.write(f"Frist Name: {first_name_entry.get()}\n")
